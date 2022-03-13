@@ -1,1 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <title>JSON Song List</title>
+        <meta charset="utf-8"/>
+        <script>
+            function loadFile() {
+                request = new XMLHttpRequest();
+                request.open("GET", "songs.json", true);
+                
+                request.onreadystatechange = function() {
+                    if (request.readyState == 4 && request.status == 200) {
+                        result = request.responseText;
+                        document.getElementById("raw").innerHTML = result;
 
+                        songs = JSON.parse(result);
+                        strHTML = "";
+                        songs.forEach(function(song) {
+                            strHTML += song.name + "<br/>Artist: " + song.artist + "<br/>Genre: " + song.genre + "<br/>Released: " + song.year + "<br/><br/>";
+                        })
+                        document.getElementById("formatted").innerHTML = strHTML;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>JSON Song List</h1>
+        <p id="raw">Loading...</p>
+        <p id="formatted">Loading...</p>
+        <script language="javascript">
+            loadFile();
+        </script>
+    </body>
+</html>
