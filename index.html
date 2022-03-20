@@ -7,13 +7,14 @@
             function loadFile() {
                 var request = new XMLHttpRequest();
                 request.open("GET", "../songs.json", true);
+
+                document.getElementById("raw").innerHTML = "State:" + request.readyState;
                 
                 request.onreadystatechange = function() {
                     if (request.readyState == 4 && request.status == 200) {
-                        result = request.responseText;
                         document.getElementById("raw").innerHTML = request.responseText;
 
-                        object = JSON.parse(result);
+                        object = JSON.parse(request.responseText);
                         songs = object.songs;
                         strHTML = "";
                         songs.forEach(function(song) {
