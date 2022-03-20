@@ -24,7 +24,8 @@
                     } else {
                         document.getElementById("raw").innerHTML = "State:" + request.readyState;
                     }
-                }
+                };
+                request.send();
             }
         </script>
     </head>
