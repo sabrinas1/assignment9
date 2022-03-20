@@ -5,13 +5,13 @@
         <meta charset="utf-8"/>
         <script>
             function loadFile() {
-                request = new XMLHttpRequest();
+                var request = new XMLHttpRequest();
                 request.open("GET", "assignment9/songs.json", true);
                 
                 request.onreadystatechange = function() {
                     if (request.readyState == 4 && request.status == 200) {
                         result = request.responseText;
-                        document.getElementById("raw").innerHTML = result;
+                        document.getElementById("raw").innerHTML = request.responseText;
 
                         object = JSON.parse(result);
                         songs = object.songs;
@@ -30,8 +30,8 @@
     <body onload="loadFile()">
         <h1>JSON Song List</h1>
         <br/>
-        <p id="raw">Loading...</p>
+        <div id="raw">Loading...</div>
         <br/>
-        <p id="formatted">Loading...</p>
+        <div id="formatted">Loading...</div>
     </body>
 </html>
