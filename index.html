@@ -22,6 +22,7 @@
                                 + "<br/>Genre: " + songs[i].genre + "<br/>Released: " 
                                 + songs[i].year + "<br/><br/>";
                         }
+                        strHTML.replace(&, "%26")
                         document.getElementById("formatted").innerHTML = strHTML;
                     } else {
                         document.getElementById("raw").innerHTML = "State:" + request.readyState;
@@ -37,5 +38,12 @@
         <div id="raw">Loading...</div>
         <br/>
         <div id="formatted">Loading...</div>
+        <!-- <form id="form">
+            <select id="filter" name="filter">
+                <option value="pop">Pop</option>
+                <option value="country">Country</option>
+                <option value=""
+            </select>
+        </form> -->
     </body>
 </html>
