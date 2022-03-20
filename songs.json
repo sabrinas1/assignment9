@@ -1,86 +1,86 @@
 {
     "Songs": [
-{
-    "name": "Lovebug",
-    "artist": "The Jonas Brothers",
-    "genre": ["pop"],
-    "year": 2008
-},
-    
-{
-    "name": "You Belong With Me",
-    "artist": "Taylor Swift",
-    "genre": ["country", "pop"],
-    "year": 2008
-},
-    
-{
-    "name": "Love Me Harder",
-    "artist": "Ariana Grande",
-    "genres": ["pop", "R &amp; B"],
-    "year": 2014
-},
-    
-{
-    "name": "Someone To You",
-    "artist": "Banners",
-    "genre": ["alternative"],
-    "year": 2019
-},
-    
-{
-    "name": "Can't Feel My Face",
-    "artist": "The Weeknd",
-    "genre": ["pop", "funk", "R &amp; B"],
-    "year": 2015
-},
-    
-{
-    "name": "All I Do is Win",
-    "artist": "DJ Khaled",
-    "genre": ["hip hop"],
-    "year": 2010
-},
-    
-{
-    "name": "On Top of The World",
-    "artist": "Imagine Dragons",
-    "genre": ["alternative"],
-    "year": 2012
-},
-    
-{
-    "name": "Get Lucky",
-    "artist": "Daft Punk",
-    "genre": ["alternative", "EDM"],
-    "year": 2013
-},
-    
-{
-    "name": "Love Me Like You Do",
-    "artist": "Ellie Goulding",
-    "genre": ["pop"],
-    "year": 2015
-},
-    
-{
-    "name": "...Ready For It?",
-    "artist": "Taylor Swift",
-    "genre": ["pop"],
-    "year": 2017
-},
-    
-{
-    "name": "Like I'm Gonna Lose You",
-    "artist": "Meghan Trainor",
-    "genre": ["pop"],
-    "year": 2016
-},
+    {
+        "name": "Lovebug",
+        "artist": "The Jonas Brothers",
+        "genre": ["pop"],
+        "year": 2008
+    },
+        
+    {
+        "name": "You Belong With Me",
+        "artist": "Taylor Swift",
+        "genre": ["country", "pop"],
+        "year": 2008
+    },
+        
+    {
+        "name": "Love Me Harder",
+        "artist": "Ariana Grande",
+        "genres": ["pop", "R &amp; B"],
+        "year": 2014
+    },
+        
+    {
+        "name": "Someone To You",
+        "artist": "Banners",
+        "genre": ["alternative"],
+        "year": 2019
+    },
+        
+    {
+        "name": "Can't Feel My Face",
+        "artist": "The Weeknd",
+        "genre": ["pop", "funk", "R &amp; B"],
+        "year": 2015
+    },
+        
+    {
+        "name": "All I Do is Win",
+        "artist": "DJ Khaled",
+        "genre": ["hip hop"],
+        "year": 2010
+    },
+        
+    {
+        "name": "On Top of The World",
+        "artist": "Imagine Dragons",
+        "genre": ["alternative"],
+        "year": 2012
+    },
+        
+    {
+        "name": "Get Lucky",
+        "artist": "Daft Punk",
+        "genre": ["alternative", "EDM"],
+        "year": 2013
+    },
+        
+    {
+        "name": "Love Me Like You Do",
+        "artist": "Ellie Goulding",
+        "genre": ["pop"],
+        "year": 2015
+    },
+        
+    {
+        "name": "...Ready For It?",
+        "artist": "Taylor Swift",
+        "genre": ["pop"],
+        "year": 2017
+    },
+        
+    {
+        "name": "Like I'm Gonna Lose You",
+        "artist": "Meghan Trainor",
+        "genre": ["pop"],
+        "year": 2016
+    },
 
-{
-    "name": "Crazy in Love",
-    "artist": "Beyonce",
-    "genre": ["pop"],
-    "year": 2003
-}
+    {
+        "name": "Crazy in Love",
+        "artist": "Beyonce",
+        "genre": ["pop"],
+        "year": 2003
+    }
 ]}
