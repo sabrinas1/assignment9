@@ -17,7 +17,7 @@
     {
         "name": "Love Me Harder",
         "artist": "Ariana Grande",
-        "genres": ["pop", "R%26B"],
+        "genres": ["pop", "R & B"],
         "year": 2014
     },
         
@@ -31,7 +31,7 @@
     {
         "name": "Can't Feel My Face",
         "artist": "The Weeknd",
-        "genre": ["pop", "funk", "R &amp; B"],
+        "genre": ["pop", "funk", "R & B"],
         "year": 2015
     },
         
