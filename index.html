@@ -19,7 +19,7 @@
                         strHTML = "";
                         for (var i = 0; i < 11; i++) {
                             strHTML += songs[i].name + "<br/>Artist: " + songs[i].artist 
-                                + "<br/>Genre: " + songs[i].genre + "<br/>Released: " 
+                                + "<br/>Genre: " + songs[i].genre.join(", ") + "<br/>Released: " 
                                 + songs[i].year + "<br/><br/>";
                         }
                         strHTML = strHTML.replaceAll("&", "%26");
