@@ -6,7 +6,7 @@
         <script>
             function loadFile() {
                 request = new XMLHttpRequest();
-                request.open("GET", "/songs.json", true);
+                request.open("GET", "assignment9/songs.json", true);
                 
                 request.onreadystatechange = function() {
                     if (request.readyState == 4 && request.status == 200) {
