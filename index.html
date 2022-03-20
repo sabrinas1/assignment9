@@ -17,12 +17,11 @@
                         object = JSON.parse(request.responseText);
                         songs = object.Songs;
                         strHTML = "";
-                        strHTML = JSON.stringify(songs);
-                        // for (var i = 0; i < 11; i++) {
-                        //     strHTML += songs[i].name + "<br/>Artist: " + songs[i].artist 
-                        //         + "<br/>Genre: " + songs[i].genre + "<br/>Released: " 
-                        //         + songs[i].year + "<br/><br/>";
-                        // }
+                        for (var i = 0; i < 11; i++) {
+                            strHTML += songs[i].name + "<br/>Artist: " + songs[i].artist 
+                                + "<br/>Genre: " + songs[i].genre + "<br/>Released: " 
+                                + songs[i].year + "<br/><br/>";
+                        }
                         document.getElementById("formatted").innerHTML = strHTML;
                     } else {
                         document.getElementById("raw").innerHTML = "State:" + request.readyState;
