@@ -15,9 +15,9 @@
                         document.getElementById("raw").innerHTML = request.responseText;
 
                         object = JSON.parse(request.responseText);
-                        //songs = object;
+                        songs = object.songs;
                         strHTML = "";
-                        strHTML = JSON.stringify(object[0]);
+                        strHTML = JSON.stringify(songs);
                         // for (var i = 0; i < 11; i++) {
                         //     strHTML += songs[i].name + "<br/>Artist: " + songs[i].artist 
                         //         + "<br/>Genre: " + songs[i].genre + "<br/>Released: " 
