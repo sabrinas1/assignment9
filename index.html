@@ -22,7 +22,7 @@
                                 + "<br/>Genre: " + songs[i].genre + "<br/>Released: " 
                                 + songs[i].year + "<br/><br/>";
                         }
-                        strHTML.replace(&, "%26")
+                        strHTML = strHTML.replaceAll("&", "%26");
                         document.getElementById("formatted").innerHTML = strHTML;
                     } else {
                         document.getElementById("raw").innerHTML = "State:" + request.readyState;
