@@ -1,4 +1,5 @@
-[
+{
+    "Songs": [
 {
     "name": "Lovebug",
     "artist": "The Jonas Brothers",
@@ -82,4 +83,4 @@
     "genre": ["pop"],
     "year": 2003
 }
-]
+]}
