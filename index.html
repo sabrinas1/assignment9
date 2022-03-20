@@ -17,7 +17,7 @@
                         object = JSON.parse(request.responseText);
                         songs = object.songs;
                         strHTML = "";
-                        for (var i = 0; i < songs.length; i++) {
+                        for (var i = 0; i <= 11; i++) {
                             strHTML += songs[i].name + "<br/>Artist: " + songs[i].artist 
                                 + "<br/>Genre: " + songs[i].genre + "<br/>Released: " 
                                 + songs[i].year + "<br/><br/>";
