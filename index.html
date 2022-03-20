@@ -20,6 +20,8 @@
                             strHTML += song.name + "<br/>Artist: " + song.artist + "<br/>Genre: " + song.genre + "<br/>Released: " + song.year + "<br/><br/>";
                         })
                         document.getElementById("formatted").innerHTML = strHTML;
+                    } else {
+                        console.log("State:" + request.readyState);
                     }
                 }
             }
