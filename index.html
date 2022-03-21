@@ -32,7 +32,7 @@
 
             function filter() {
                 console.log("in filter");
-                const form = document.getElementById("form");
+                const form = document.getElementById("genre");
                 filter = form.elements[genre];
                 console.log(filter);
                 console.log(filter.value);
@@ -59,7 +59,7 @@
         <div id="raw">Loading...</div>
         <br/>
         <form id="form">
-            <select id="genre" name="Genres">
+            <select form="form" id="genre" name="genre">
                 <option value="all">All</option>
                 <option value="pop">Pop</option>
                 <option value="country">Country</option>
