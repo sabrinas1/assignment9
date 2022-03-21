@@ -30,11 +30,11 @@
                 request.send();
             }
 
-            function filter() {
+            function filter(oform) {
                 console.log("in filter");
-                const form = document.getElementById("form");
-                filter = form.elements[genre];
-                console.log(filter);
+                
+                var filter = oform.elements[genre];
+                //console.log(filter);
                 console.log(filter.value);
                 if (filter.value == "all") return;
                 
@@ -59,7 +59,7 @@
         <div id="raw">Loading...</div>
         <br/>
         <form id="form">
-            <select form="form" id="genre" name="genre">
+            <select form="form" name="genre">
                 <option value="all">All</option>
                 <option value="pop">Pop</option>
                 <option value="country">Country</option>
@@ -69,7 +69,7 @@
                 <option value="hip hop">Hip hop</option>
                 <option value="EDM">EDM</option>
             </select>
-            <input type="button" onclick="filter()" value="Filter">
+            <input type="button" onclick="filter(this.form)" value="Filter">
         </form>
         <br/>
         <div id="formatted">Loading...</div>
