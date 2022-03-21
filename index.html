@@ -34,11 +34,10 @@
                 const form = document.getElementById("form");
                 filter = form.elements[genre];
                 
-                // var request = new XMLHttpRequest();
-                // request.open("GET", "../assignment9/songs.json", true);
                 
-                // object = JSON.parse(request.responseText);
-                // songs = object.Songs;
+                
+                object = JSON.parse(document.getElementById("raw").innerHTML);
+                songs = object.Songs;
                 strHTML2 = "";
                 for (var i = 0; i < 11; i++) {
                     if (songs.genre.includes(filter)) {
@@ -49,8 +48,6 @@
                 }
 
                 document.getElementById("selected").innerHTML = strHTML2;
-
-                //request.send();
             }
         </script>
     </head>
