@@ -36,13 +36,12 @@
                 var filter = oform.elements["genre"];
                 //console.log(filter);
                 console.log(filter.value);
-                if (filter.value == "all") return;
                 
                 object = JSON.parse(document.getElementById("raw").innerHTML);
                 songs = object.Songs;
                 strHTML2 = "";
                 for (var i = 0; i < 11; i++) {
-                    if (songs[i].genre.includes(filter.value)) {
+                    if (songs[i].genre.includes(filter.value) || filter.value == "all") {
                         strHTML2 += songs[i].name + "<br/>Artist: " + songs[i].artist
                             + "<br/>Genre: " + songs[i].genre + "<br/>Released: "
                             + songs[i].year + "<br/><br/>";
@@ -63,7 +62,7 @@
                 <option value="all">All</option>
                 <option value="pop">Pop</option>
                 <option value="country">Country</option>
-                <option value="R&amp;B">R&amp;B</option>
+                <option value="R&B">R&amp;B</option>
                 <option value="alternative">Alternative</option>
                 <option value="funk">Funk</option>
                 <option value="hip hop">Hip hop</option>
