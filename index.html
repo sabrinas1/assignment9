@@ -31,8 +31,11 @@
             }
 
             function filter() {
+                console.log("in filter");
                 const form = document.getElementById("form");
                 filter = form.elements[genre];
+                console.log(filter);
+                console.log(filter.value);
                 if (filter.value == "all") return;
                 
                 object = JSON.parse(document.getElementById("raw").innerHTML);
