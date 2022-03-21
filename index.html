@@ -32,25 +32,25 @@
 
             function filter() {
                 const form = document.getElementById("form");
-                filter = form.elements[genre].value;
+                filter = form.elements[genre];
                 
-                var request = new XMLHttpRequest();
-                request.open("GET", "../assignment9/songs.json", true);
+                // var request = new XMLHttpRequest();
+                // request.open("GET", "../assignment9/songs.json", true);
                 
-                object = JSON.parse(request.responseText);
-                songs = object.Songs;
-                strHTML = "";
+                // object = JSON.parse(request.responseText);
+                // songs = object.Songs;
+                strHTML2 = "";
                 for (var i = 0; i < 11; i++) {
                     if (songs.genre.includes(filter)) {
-                        strHTML += songs[i].name + "<br/>Artist: " + songs[i].artist
+                        strHTML2 += songs[i].name + "<br/>Artist: " + songs[i].artist
                             + "<br/>Genre: " + songs[i].genre + "<br/>Released: "
                             + songs[i].year + "<br/><br/>";
                     }
                 }
 
-                document.getElementById("selected").innerHTML = strHTML;
+                document.getElementById("selected").innerHTML = strHTML2;
 
-                request.send();
+                //request.send();
             }
         </script>
     </head>
