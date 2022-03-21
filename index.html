@@ -22,12 +22,34 @@
                                 + "<br/>Genre: " + songs[i].genre + "<br/>Released: " 
                                 + songs[i].year + "<br/><br/>";
                         }
-                        //strHTML = strHTML.replaceAll("&", "%26");
                         document.getElementById("formatted").innerHTML = strHTML;
                     } else {
                         document.getElementById("raw").innerHTML = "State:" + request.readyState;
                     }
                 };
+                request.send();
+            }
+
+            function filter() {
+                const form = document.getElementById("form");
+                filter = form.elements[genre].value;
+                
+                var request = new XMLHttpRequest();
+                request.open("GET", "../assignment9/songs.json", true);
+                
+                object = JSON.parse(request.responseText);
+                songs = object.Songs;
+                strHTML = "";
+                for (var i = 0; i < 11; i++) {
+                    if (songs.genre.includes(filter)) {
+                        strHTML += songs[i].name + "<br/>Artist: " + songs[i].artist
+                            + "<br/>Genre: " + songs[i].genre + "<br/>Released: "
+                            + songs[i].year + "<br/><br/>";
+                    }
+                }
+
+                document.getElementById("selected").innerHTML = strHTML;
+
                 request.send();
             }
         </script>
@@ -38,12 +60,19 @@
         <div id="raw">Loading...</div>
         <br/>
         <div id="formatted">Loading...</div>
-        <!-- <form id="form">
-            <select id="filter" name="filter">
+        <form id="form">
+            <select id="genre" name="Genres">
                 <option value="pop">Pop</option>
                 <option value="country">Country</option>
-                <option value=""
+                <option value="R&amp;B">R&amp;B</option>
+                <option value="alternative">Alternative</option>
+                <option value="funk">Funk</option>
+                <option value="hip hop">Hip hop</option>
+                <option value="EDM">EDM</option>
             </select>
-        </form> -->
+            <input type="button" onclick="filter()" value="Filter">
+        </form>
+        <br/>
+        <div id="selected">Loading...</div>
     </body>
 </html>
