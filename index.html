@@ -33,21 +33,20 @@
             function filter() {
                 const form = document.getElementById("form");
                 filter = form.elements[genre];
-                
-                
+                if (filter.value == "all") return;
                 
                 object = JSON.parse(document.getElementById("raw").innerHTML);
                 songs = object.Songs;
                 strHTML2 = "";
                 for (var i = 0; i < 11; i++) {
-                    if (songs.genre.includes(filter)) {
+                    if (songs[i].genre.includes(filter.value)) {
                         strHTML2 += songs[i].name + "<br/>Artist: " + songs[i].artist
                             + "<br/>Genre: " + songs[i].genre + "<br/>Released: "
                             + songs[i].year + "<br/><br/>";
                     }
                 }
 
-                document.getElementById("selected").innerHTML = strHTML2;
+                document.getElementById("formatted").innerHTML = strHTML2;
             }
         </script>
     </head>
@@ -56,9 +55,9 @@
         <br/>
         <div id="raw">Loading...</div>
         <br/>
-        <div id="formatted">Loading...</div>
         <form id="form">
             <select id="genre" name="Genres">
+                <option value="all">All</option>
                 <option value="pop">Pop</option>
                 <option value="country">Country</option>
                 <option value="R&amp;B">R&amp;B</option>
@@ -70,6 +69,6 @@
             <input type="button" onclick="filter()" value="Filter">
         </form>
         <br/>
-        <div id="selected">Loading...</div>
+        <div id="formatted">Loading...</div>
     </body>
 </html>
